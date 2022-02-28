@@ -1,0 +1,43 @@
+@import "frontPage";
+@import "tic-tac-toe";
+@import "calculator";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+}
+
+.icon {
+  &__return {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
+    z-index: 5000;
+
+    &--black {
+      color: rgb(19, 19, 19);
+    }
+
+    &--white {
+      color: #eee;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,185 @@
+.calculator {
+  display: grid;
+
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows:
+    1fr minmax(140px, auto)
+    max-content 1.5fr;
+  gap: 2rem;
+
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(to right bottom, #383b3b, rgb(25, 28, 31));
+  height: 100vh;
+
+  &__output {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-image: linear-gradient(to right bottom, #dfe1e2, #eee);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 1rem 0.8rem rgba(77, 74, 72, 0.5);
+    }
+
+    &--previous {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: black;
+    }
+
+    &--current {
+      font-size: 4rem;
+      font-weight: 500;
+      color: black;
+    }
+  }
+}
+
+.btnsCal {
+  &__basic {
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(3rem, 1fr));
+    grid-template-rows: repeat(5, max-content);
+    gap: 1rem;
+  }
+
+  &__extra {
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(3rem, 1fr));
+    grid-template-rows: repeat(5, max-content);
+    gap: 1rem;
+  }
+}
+
+.btnCal {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(rgb(146, 149, 151), 0.8),
+    rgba(rgb(73, 80, 87), 0.7)
+  );
+  color: #eee;
+  border-radius: 200px;
+  border: none;
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  padding: 2rem;
+  box-shadow: 0 0.6rem 0.51rem rgba(rgb(32, 31, 31), 0.9);
+  transition: all 0.3s;
+
+  &:hover {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(142, 151, 160), 0.8),
+      rgba(rgb(173, 181, 189), 0.5)
+    );
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+
+  &__main {
+    background-image: linear-gradient(to right bottom, #313235, #4f5458);
+
+    &:hover {
+      background-image: linear-gradient(to right bottom, #74b816, #5c940d);
+    }
+
+    &--0 {
+      grid-row: -1/-2;
+      grid-column: 1/3;
+    }
+
+    &--1 {
+      grid-row: -2/-3;
+      grid-column: 1/2;
+    }
+    &--2 {
+      grid-row: -2/-3;
+      grid-column: 2/3;
+    }
+    &--3 {
+      grid-row: -2/-3;
+      grid-column: 3/4;
+    }
+    &--4 {
+      grid-row: -3/-4;
+      grid-column: 1/2;
+    }
+    &--5 {
+      grid-row: -3/-4;
+      grid-column: 2/3;
+    }
+    &--6 {
+      grid-row: -3/-4;
+      grid-column: 3/4;
+    }
+    &--7 {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+    &--8 {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+    &--9 {
+      grid-row: 2/3;
+      grid-column: 3/4;
+    }
+    &--dot {
+      grid-row: -1/-2;
+      grid-column: 3/4;
+    }
+    &--equal {
+      grid-row: -1/-2;
+      grid-column: 4/5;
+
+      background-image: linear-gradient(to right bottom, #74b816, #94d82d);
+
+      &:hover {
+        background-image: linear-gradient(to right bottom, #74b816, #5c940d);
+      }
+    }
+    &--clean {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    &--plus {
+      grid-row: -2/-3;
+      grid-column: 4/5;
+    }
+    &--minus {
+      grid-row: -3/-4;
+      grid-column: 4/5;
+      // font-size: 3.4rem;
+    }
+    &--x {
+      grid-row: 2/3;
+      grid-column: 4/5;
+    }
+    &--dev {
+      grid-row: 1/2;
+      grid-column: 4/5;
+      // font-size: 3.4rem;
+    }
+    &--procent {
+      grid-row: 1/2;
+      grid-column: 3/4;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Rubik:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Exercises</title>
+  </head>
+  <body>
+    <main class="frontPage">
+      <div class="frontPage__btns">
+        <button btn-tic class="frontPage__btn">Tic Tac Toe</button>
+        <button btn-cal class="frontPage__btn">Calculator</button>
+      </div>
+    </main>
+
+    <section class="section tictactoe">
+      <ion-icon
+        class="icon__return icon__return--black"
+        name="arrow-back-outline"
+      ></ion-icon>
+
+      <header class="headerTic">
+        <h1 class="headingTic__1">Tic Tac Toe</h1>
+        <div class="btnsTic">
+          <button class="btnTic btnTic--1">X</button>
+          <button class="btnTic btnTic--2">O</button>
+        </div>
+      </header>
+
+      <main class="mainTic">
+        <div class="boxesTic" id="boxesTic">
+          <div data-box-Tic class="boxTic boxTic__1"></div>
+          <div data-box-Tic class="boxTic boxTic__2"></div>
+          <div data-box-Tic class="boxTic boxTic__3"></div>
+          <div data-box-Tic class="boxTic boxTic__4"></div>
+          <div data-box-Tic class="boxTic boxTic__5"></div>
+          <div data-box-Tic class="boxTic boxTic__6"></div>
+          <div data-box-Tic class="boxTic boxTic__7"></div>
+          <div data-box-Tic class="boxTic boxTic__8"></div>
+          <div data-box-Tic class="boxTic boxTic__9"></div>
+        </div>
+      </main>
+
+      <div class="winningTic__message" id="winningMessageTic">
+        <div data-winning-message-text-tic class="headingTic__1"></div>
+        <button class="btnTic" id="restartButtonTic">Restart</button>
+      </div>
+    </section>
+
+    <section class="section calculator">
+      <ion-icon
+        class="icon__return icon__return--white"
+        name="arrow-back-outline"
+      ></ion-icon>
+
+      <div class="calculator__output">
+        <div data-previous-output class="calculator__output--previous"></div>
+        <div data-current-output class="calculator__output--current"></div>
+      </div>
+      <div class="btnsCal__basic">
+        <button data-number class="btnCal btnCal__main btnCal__main--0">
+          0
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--1">
+          1
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--2">
+          2
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--3">
+          3
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--4">
+          4
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--5">
+          5
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--6">
+          6
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--7">
+          7
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--8">
+          8
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--9">
+          9
+        </button>
+        <button data-number class="btnCal btnCal__main btnCal__main--dot">
+          .
+        </button>
+
+        <button data-equals class="btnCal btnCal__main--equal">=</button>
+        <button data-all-clear class="btnCal btnCal__main--clean">C</button>
+
+        <button data-operation class="btnCal btnCal__main--plus">+</button>
+        <button data-operation class="btnCal btnCal__green btnCal__main--minus">
+          -
+        </button>
+        <button data-operation class="btnCal btnCal__main--x">x</button>
+        <button data-operation class="btnCal btnCal__main--dev">÷</button>
+        <button data-operation class="btnCal btnCal__main--procent">%</button>
+        <button data-operation class="btnCal btnCal__main--plusminus">
+          +/-
+        </button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
