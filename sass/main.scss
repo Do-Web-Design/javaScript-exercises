@@ -2,6 +2,10 @@
 @import "tic-tac-toe";
 @import "calculator";
 
+$bp-831: 51.95em;
+$bp-624: 39rem;
+$bp-480: 30em;
+
 *,
 *::before,
 *::after {
@@ -13,6 +17,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-831) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-624) {
+    font-size: 45%;
+  }
+
+  @media only screen and (max-width: $bp-480) {
+    font-size: 40%;
+  }
 }
 
 body {
