@@ -68,6 +68,11 @@
   background-color: rgb(19, 19, 19);
 
   z-index: -1;
+
+  @media only screen and (max-width: $bp-480) {
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+    grid-template-rows: repeat(3, minmax(10rem, 1fr));
+  }
 }
 
 .boxTic {

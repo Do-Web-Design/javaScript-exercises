@@ -44,6 +44,10 @@ body {
     width: 5rem;
     z-index: 5000;
 
+    @media only screen and (max-width: $bp-480) {
+      left: 1rem;
+    }
+
     &--black {
       color: rgb(19, 19, 19);
     }
