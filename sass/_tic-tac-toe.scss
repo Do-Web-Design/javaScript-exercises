@@ -27,6 +27,10 @@
   margin: 3rem 0;
 
   color: rgb(19, 19, 19);
+
+  @media only screen and (max-width: $bp-480) {
+    font-size: 6rem;
+  }
 }
 
 .btnsTic {
